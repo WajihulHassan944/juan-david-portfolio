@@ -443,6 +443,11 @@ section {
   position: relative;
 }
 
+.resume .resume-item img{
+	position:absolute;
+	top:0;
+	right:0;
+}
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
