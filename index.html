@@ -682,6 +682,52 @@
       </div>
     </section><!-- End Testimonials Section -->
 
+<!-- Add this div for the loading animation -->
+<div id="loadingAnimation" class="loading-container">
+  <div class="loading-spinner"></div>
+</div>
+
+<style>
+
+.loading-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}</style>
+
+
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -719,7 +765,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form class="php-email-form" id="newOrderForm">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -739,17 +785,87 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us" id="messageBody"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              
+			  <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
+
+
+
+
+
+
+
+<script>
+
+var userName = document.getElementById("name");
+var userEmail = document.getElementById("email");
+var userMessage = document.getElementById("messageBody");
+var userSubject = document.getElementById("subject");
+
+
+
+var orderFormSubmit = document.getElementById("newOrderForm");
+
+var loadingAnimation = document.getElementById("loadingAnimation");
+const body = document.querySelector("body");
+ 
+ 
+orderFormSubmit.addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  
+loadingAnimation.style.display = "block";
+
+  var formData = {
+    name: userName.value,
+	email: userEmail.value,
+	message: userMessage.value ,
+	subject: userSubject.value,
+  };
+
+  fetch("https://bewildered-tan-tux.cyclic.cloud/send-data-juan", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(function(response) {
+    if (response.ok) {
+      alert("Message submitted successfully.");
+	  loadingAnimation.style.display = "none";
+	  location.reload();
+	  
+    } else {
+      console.log("Error submitting message.");
+	  loadingAnimation.style.display = "none";
+    }
+  })
+  .catch(function(error) {
+    console.log("Error submitting message.");
+	loadingAnimation.style.display = "none";
+    console.error(error);
+  });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
 
