@@ -157,11 +157,27 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="count-box">
              <i class="fa fa-calendar"></i>
-              <span data-toggle="counter-up">8</span>
+              <span data-toggle="counter-up" id="industry-experience">0</span>
               <p><strong>Since 2017 in the industry</strong> </p>
             </div>
           </div>
 
+
+<script>
+
+const startingYear = 2017;
+
+// Calculate the years of experience
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - startingYear;
+
+// Update the years of experience in the HTML
+const industryExperienceElement = document.getElementById("industry-experience");
+industryExperienceElement.textContent = yearsOfExperience + 1;
+
+
+
+</script>
        <!--   <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="count-box">
               <i class="icofont-live-support"></i>
@@ -181,113 +197,240 @@
         </div>
 
 		<h3 class="resume-title">Hands on experience in platforms like</h3>
-<style>.image-slider-container {
+<style>
+.scroller {
   max-width: 800px;
+}
+@media (max-width: 400px) {
+  .scroller {
+    max-width: 100%;
+  }
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
   overflow: hidden;
-  margin-top:30px;
-  padding:0 20px;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.image-slider {
-  display: flex;
-  animation: slide 20s linear infinite;
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 
-.image-slider img {
-  margin-right: 30px;
+#rough {
+  display: grid;
+  min-block-size: 100vh;
+  place-content: center;
+  font-family: system-ui;
+  font-size: 1.125rem;
 }
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  33.33% { transform: translateX(-100%); }
-  66.67% { transform: translateX(-130%); }
-  100% { transform: translateX(0); }
-}
-
-
-.image-slider-two {
-  display: flex;
-  animation: slidetwo 50s linear infinite;
-}
-
-
-.image-slider-two img {
-  margin-right: 40px;
-}
-
-@keyframes slidetwo {
-   0% { transform: translateX(0); }
-  12.5% { transform: translateX(-100%); }
-  25% { transform: translateX(-200%); }
-  37.5% { transform: translateX(-300%); }
-  50% { transform: translateX(-400%); }
-  62.5% { transform: translateX(-500%); }
-   75% { transform: translateX(-600%); }
-  100% { transform: translateX(0); }
+.scroller__inner img{
+	width:100px;
+	aspect-ratio:1;
+	
 }
 </style>
 
-
-<div class="image-slider-container">
-  <div class="image-slider">
-    <img src="assets/logosOne/adbid.jpg" alt="adbid" style="width:100px;">
-    <img src="assets/logosOne/admiral media.png" alt="admiral media" style="width:100px;">
-    <img src="assets/logosOne/amazon.png" alt="amazon" style="width:150px;">
-    <img src="assets/logosOne/burson marsteller.png" alt="burson marsteller" style="width:100px;">
-    <img src="assets/logosOne/eneb.png" alt="eneb" style="width:100px;">
-    <img src="assets/logosOne/goethe.png" alt="goethe" style="width:150px;">
-    <img src="assets/logosOne/havas.png" alt="havas" style="width:100px;">
-    <img src="assets/logosOne/javeriana.png" alt="javeriana" style="width:100px;">
-    <img src="assets/logosOne/mindshare.jpg" alt="mindshare" style="width:180px;">
-    <img src="assets/logosOne/publicis media.png" alt="publicis media" style="width:100px;">
-    <img src="assets/logosOne/tangible.png" alt="tangible" style="width:170px;">
+<div class="scroller" data-direction="right" data-speed="slow">
+  <div class="scroller__inner">
+    <img src="assets/logosThree/adjust.png" alt="" />
+    <img src="assets/logosThree/apple.png" alt="" />
+    <img src="assets/logosThree/appsflyer.png" alt="" />
+	<img src="assets/logosThree/dv360.png" alt="" />
+    <img src="assets/logosThree/firebase.png" alt="" />
+	<img src="assets/logosThree/google ads.png" alt="" />
+    <img src="assets/logosThree/meta.png" alt="" />
+	<img src="assets/logosThree/moloco.png" alt="" />
+    <img src="assets/logosThree/pinterest.jpg" alt="" />
+	<img src="assets/logosThree/singular_logo_2019.png" alt="" />
+	<img src="assets/logosThree/snapchat.png" alt="" />
+	<img src="assets/logosThree/tableau.png" alt="" />
+	<img src="assets/logosThree/tiktok.png" alt="" />
+	
   </div>
 </div>
-
 
 
 <h3 class="resume-title" style="margin-top:50px;">Brands I have worked for</h3>
 
-<div class="image-slider-container">
-  <div class="image-slider-two">
-    <img src="assets/logosTwo/abbott-logo.png" alt="adbid" style="width:150px;">
-    <img src="assets/logosTwo/arturo calle.jpg" alt="admiral media" style="width:150px;">
-    <img src="assets/logosTwo/Bloom.jpeg" alt="amazon" style="width:100px;">
-    <img src="assets/logosTwo/bondora.png" alt="burson marsteller" style="width:100px;">
-    <img src="assets/logosTwo/bonial.png" alt="eneb" style="width:150px;">
-    <img src="assets/logosTwo/brightmind.png" alt="goethe" style="width:150px;">
-    <img src="assets/logosTwo/bytro logo.png" alt="havas" style="width:150px;">
-    <img src="assets/logosTwo/carroya.jpg" alt="javeriana" style="width:150px;">
-    <img src="assets/logosTwo/CineColombia.png" alt="mindshare" style="width:150px;">
-    <img src="assets/logosTwo/Claro.png" alt="publicis media" style="width:150px;">
-    <img src="assets/logosTwo/Coca-Cola_logo.svg.png" alt="tangible" style="width:210px;">
-    <img src="assets/logosTwo/cruz verde.png" alt="publicis media" style="width:150px;">
-    <img src="assets/logosTwo/fastic.png" alt="tangible" style="width:150px;">
-    <img src="assets/logosTwo/himalaya logo.png" alt="publicis media" style="width:150px;">
-    <img src="assets/logosTwo/Kimberly-Clark_logo.svg.png" alt="tangible" style="width:210px;">
-    <img src="assets/logosTwo/metrocuadrado.jpg" alt="publicis media" style="width:130px;">
-    <img src="assets/logosTwo/mrd.png" alt="tangible" style="width:130px;">
-	<img src="assets/logosTwo/neuronation.png" alt="publicis media" style="width:130px;">
-    <img src="assets/logosTwo/PetitBamBouLogo.png" alt="tangible" style="width:130px;">
-    <img src="assets/logosTwo/pinbus.png" alt="publicis media" style="width:130px;">
-    <img src="assets/logosTwo/psiquicos.png" alt="tangible" style="width:130px;">
-	<img src="assets/logosTwo/rapicredit.png" alt="publicis media" style="width:150px;">
-    <img src="assets/logosTwo/sproutl.jpg" alt="tangible" style="width:130px;">
-    <img src="assets/logosTwo/storybeat.png" alt="publicis media" style="width:130px;">
-    <img src="assets/logosTwo/teleprompter.png" alt="tangible" style="width:130px;">
-    <img src="assets/logosTwo/tier.png" alt="tangible" style="width:130px;">
-    <img src="assets/logosTwo/vitadio.png" alt="publicis media" style="width:130px;">
-    <img src="assets/logosTwo/zodiac touch.png" alt="tangible" style="width:130px;">
+
+<div class="scroller" data-direction="left" data-speed="slow">
+  <div class="scroller__inner">
+    <img src="assets/logosTwo/abbott-logo.png" alt="adbid">
+    <img src="assets/logosTwo/arturo calle.jpg" alt="admiral media">
+    <img src="assets/logosTwo/Bloom.jpeg" alt="amazon">
+    <img src="assets/logosTwo/bondora.png" alt="burson marsteller">
+    <img src="assets/logosTwo/bonial.png" alt="eneb">
+    <img src="assets/logosTwo/brightmind.png" alt="goethe">
+    <img src="assets/logosTwo/bytro logo.png" alt="havas">
+    <img src="assets/logosTwo/carroya.jpg" alt="javeriana">
+    <img src="assets/logosTwo/CineColombia.png" alt="mindshare">
+    <img src="assets/logosTwo/Claro.png" alt="publicis media">
+    <img src="assets/logosTwo/Coca-Cola_logo.svg.png" alt="tangible">
+    <img src="assets/logosTwo/cruz verde.png" alt="publicis media">
+    <img src="assets/logosTwo/fastic.png" alt="tangible">
+    <img src="assets/logosTwo/himalaya logo.png" alt="publicis media">
+    <img src="assets/logosTwo/Kimberly-Clark_logo.svg.png" alt="tangible">
+    <img src="assets/logosTwo/metrocuadrado.jpg" alt="publicis media">
+    <img src="assets/logosTwo/mrd.png" alt="tangible">
+    <img src="assets/logosTwo/neuronation.png" alt="publicis media">
+    <img src="assets/logosTwo/PetitBamBouLogo.png" alt="tangible">
+    <img src="assets/logosTwo/pinbus.png" alt="publicis media">
+    <img src="assets/logosTwo/psiquicos.png" alt="tangible">
+    <img src="assets/logosTwo/rapicredit.png" alt="publicis media">
+    <img src="assets/logosTwo/sproutl.jpg" alt="tangible">
+    <img src="assets/logosTwo/storybeat.png" alt="publicis media">
+    <img src="assets/logosTwo/teleprompter.png" alt="tangible">
+    <img src="assets/logosTwo/tier.png" alt="tangible">
+    <img src="assets/logosTwo/vitadio.png" alt="publicis media">
+    <img src="assets/logosTwo/zodiac touch.png" alt="tangible">
   </div>
 </div>
 
 
+<script>
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+document.addEventListener("DOMContentLoaded", function() {
+  addMouseEvents();
+  addTouchEvents();
+});
+
+function addMouseEvents() {
+  scrollers.forEach((scroller) => {
+    let isScrolling = false;
+    let startX = 0;
+
+    scroller.addEventListener("mousedown", (e) => {
+      isScrolling = true;
+      startX = e.clientX;
+      e.preventDefault(); // Prevent default browser behavior (e.g., text selection)
+    });
+
+    scroller.addEventListener("mousemove", (e) => {
+      if (!isScrolling) return;
+
+      const deltaX = startX - e.clientX;
+      startX = e.clientX;
+
+      scroller.scrollLeft += deltaX;
+    });
+
+    scroller.addEventListener("mouseup", () => {
+      isScrolling = false;
+    });
+
+    scroller.addEventListener("mouseleave", () => {
+      isScrolling = false;
+    });
+  });
+}
+
+function addTouchEvents() {
+  scrollers.forEach((scroller) => {
+    let touchStartX = 0;
+    let touchMoveX = 0;
+    let isScrolling = false;
+
+    scroller.addEventListener("touchstart", (e) => {
+      isScrolling = true;
+      touchStartX = e.touches[0].clientX;
+      touchMoveX = touchStartX;
+    });
+
+    scroller.addEventListener("touchmove", (e) => {
+      if (!isScrolling) return;
+
+      const touch = e.touches[0];
+      const touchDeltaX = touchMoveX - touch.clientX;
+      touchMoveX = touch.clientX;
+
+      // Adjust the scroll position based on touch movement
+      scroller.scrollLeft += touchDeltaX;
+    });
+
+    scroller.addEventListener("touchend", () => {
+      isScrolling = false;
+    });
+  });
+}
+
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+</script>
 
 
 
 
-<h3 class="resume-title" style="margin-top:150px; margin-bottom:50px;">Languages I have spoken:</h3>
+
+
+
+
+
+
+<h3 class="resume-title" style="margin-top:50px; margin-bottom:50px;">Languages I have spoken:</h3>
  <div class="row">
             <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon" style="background:transparent;float: left;width: 54px;height: 54px;border-radius: 0;transition: 0.5s; border: none"><img src="assets/flags/spanish.png" style="width:70px; "></div>
@@ -307,14 +450,14 @@
                 <div class="icon" style="background:transparent;float: left;width: 54px;height: 54px;border-radius: 0;transition: 0.5s; border: none"><img src="assets/flags/german.png" style="width:70px; "></div>
                 <h4 class="title">German: </h4>
                 <ul class="description">
-                    <li>Intermidiate</li>
+                    <li>Intermediate</li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon" style="background:transparent;float: left;width: 54px;height: 54px;border-radius: 0;transition: 0.5s; border: none"><img src="assets/flags/Portuguese.png" style="width:70px; "></div>
                 <h4 class="title">Portuguese: </h4>
                 <ul class="description">
-                    <li>Intermidiate</li>
+                    <li>Intermediate</li>
                 </ul>
             </div>
 		<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -716,9 +859,10 @@
             </div>
             <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon"><i class="fa fa-facebook"></i></div>
-                <h4 class="title">Facebook Certified Media Buying Professional</h4>
+                <h4 class="title">Facebook Certified Media Professional</h4>
                 <ul class="description">
-                    <li>Facebook Certified Media Buying Professional</li>
+                    <li><a href="https://www.credly.com/badges/029a2fa0-7687-452f-80de-fafe2e5d40e6" style="text-decoration:none;color:#333;">Facebook Certified Media Buying Professional</a></li>
+                    <li><a href="https://www.credly.com/badges/6814ada2-6c87-48d6-a5d9-c1aa472308ed" style="text-decoration:none;color:#333;">Facebook Certified Media Planning Professional</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
