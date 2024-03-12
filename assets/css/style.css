@@ -1098,13 +1098,23 @@ section {
 .amazon{
 	width:150px;
 }
+.goethe{
+	width:150px;
+}
+.eneb{
+	width:100px;
+}
+.havas{
+	width:100px;
+}
 
 
 
 @media (max-width: 480px) {
 	
 .tangible{
-	width:110px;
+	width:90px;
+	margin-top:-5px;
 }
 
 .javeriana{
@@ -1113,8 +1123,7 @@ section {
 }
 
 .mindshare{
-	width:150px;
-	
+	width:120px;
 	margin-top:20px;
 }
 
@@ -1123,5 +1132,17 @@ section {
 	margin-top:30px;
 }
 
+.goethe{
+	width:120px;
+	margin-top:10px;
+	
+}
 
+.havas{
+	margin-top:15px;
+}
+
+.eneb{
+	margin-top:25px;
+}
 } 
