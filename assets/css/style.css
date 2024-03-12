@@ -1085,3 +1085,43 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.tangible{
+	width:170px;
+}
+.javeriana{
+	width:100px;
+}
+.mindshare{
+	width:180px;
+}
+.amazon{
+	width:150px;
+}
+
+
+
+@media (max-width: 480px) {
+	
+.tangible{
+	width:110px;
+}
+
+.javeriana{
+	width:80px;
+	margin-top:30px;
+}
+
+.mindshare{
+	width:150px;
+	
+	margin-top:20px;
+}
+
+.amazon{
+	width:120px;
+	margin-top:30px;
+}
+
+
+} 
