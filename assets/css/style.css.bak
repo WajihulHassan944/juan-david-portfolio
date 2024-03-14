@@ -1108,6 +1108,22 @@ section {
 	width:100px;
 }
 
+.admiralmedia{
+	width:80px;
+}	  
+.bursonmarsteller{
+	width:100px;
+}
+
+@media (max-width: 400px) {
+	
+.admiralmedia{
+	width:50px;
+	margin-top:30px;
+	}
+}
+
+
 
 
 @media (max-width: 480px) {
@@ -1139,10 +1155,16 @@ section {
 }
 
 .havas{
-	margin-top:17px;
+	margin-top:15px;
 }
 
 .eneb{
 	margin-top:25px;
 }
+
+.bursonmarsteller{
+	width:90px;
+	margin-top:30px;
+}
 } 
+
