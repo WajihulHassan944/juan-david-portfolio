@@ -246,6 +246,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
+#hero .contactButton{
+	padding:10px 25px;
+	text-align:center;
+	color:#fff;
+	background:#149ddd;
+	text-decoration:none;
+	transition:0.2s ease;
+	box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+#hero .contactButton:hover{
+	color:#149ddd;
+	background:transparent;
+	text-decoration:none;
+	border:2px solid #149ddd;
+}
 
 #hero p span {
   color: #fff;
@@ -1121,6 +1137,7 @@ section {
 	width:50px;
 	margin-top:30px;
 	}
+	
 }
 
 
@@ -1173,6 +1190,13 @@ section {
 }
 
 
+#hero p{
+	margin-bottom:250px;
+}
+
+#hero a{
+	margin-left:90px;
+}
 
 } 
 
