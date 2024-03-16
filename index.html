@@ -86,6 +86,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
   </header><!-- End Header -->
+<center><div id="cookie-banner">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <button id="accept-cookies">Accept</button>
+    <button id="reject-cookies">Reject</button>
+</div></center>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+    const cookieBanner = document.getElementById("cookie-banner");
+
+    acceptBtn.addEventListener("click", function() {
+        // Set cookie consent
+        document.cookie = "cookie_consent=accepted; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        cookieBanner.style.display = "none";
+    });
+
+    rejectBtn.addEventListener("click", function() {
+        // Handle rejection if needed
+        cookieBanner.style.display = "none";
+    });
+});
+</script>
+
+
+
+
+
+
+
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">

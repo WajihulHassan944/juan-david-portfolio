@@ -87,13 +87,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </header><!-- End Header -->
 
+
+
+
+
+
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>JUAN DAVID</h1>
       <p>I'm <span class="typed" data-typed-items="Manager, Leader, Creative"></span></p>
-	  <a href="#contact">Contact me</a>
+	  <a href="#contact" class="contactButton">Contact me</a>
     </div>
+	<center><div id="cookie-banner">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <button id="accept-cookies">Accept</button>
+    <button id="reject-cookies">Reject</button>
+</div></center>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+    const cookieBanner = document.getElementById("cookie-banner");
+
+    acceptBtn.addEventListener("click", function() {
+        // Set cookie consent
+        document.cookie = "cookie_consent=accepted; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        cookieBanner.style.display = "none";
+    });
+
+    rejectBtn.addEventListener("click", function() {
+        // Handle rejection if needed
+        cookieBanner.style.display = "none";
+    });
+});
+</script>
+
+
+
   </section><!-- End Hero -->
 
   <main id="main">
