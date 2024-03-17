@@ -86,21 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
   </header><!-- End Header -->
-
-
-
-
-
-
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>JUAN DAVID</h1>
-      <p>I'm <span class="typed" data-typed-items="Manager, Leader, Creative"></span></p>
-	  <a href="#contact" class="contactButton">Contact me</a>
-    </div>
-	<center><div id="cookie-banner">
+<center><div id="cookie-banner">
     <p>This website uses cookies to ensure you get the best experience on our website.</p>
     <button id="accept-cookies">Accept</button>
     <button id="reject-cookies">Reject</button>
@@ -128,6 +114,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>JUAN DAVID</h1>
+      <p>I'm <span class="typed" data-typed-items="Manager, Leader, Creative"></span></p>
+	  <a href="#contact" class="contactButton">Contact me</a>
+    </div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -1076,6 +1075,23 @@ function addAnimation() {
     <h3>Leon Mueller</h3>
             <h4>CEO, Bloom</h4>
           </div>
+		  
+		  
+		  
+ <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+			  Juan's timelines, flexibility, and focus on results were impressive, showcasing the top-notch quality delivered.
+		  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+			<img src="assets/logosOne/admiral media.png" alt="admiral media"  class="testimonial-img" >
+    <h3>Vitadio</h3>
+            <h4>Marketing Director, Healthcare Company</h4>
+          </div>
+		  
+		  
+		  
+		  
 
         </div>
 
@@ -1169,23 +1185,23 @@ function addAnimation() {
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" required />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us" id="messageBody"></textarea>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us" id="messageBody" required ></textarea>
                 <div class="validate"></div>
               </div>
               
